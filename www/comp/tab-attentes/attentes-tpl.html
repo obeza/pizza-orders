@@ -1,0 +1,34 @@
+<ion-view view-title="A valider">
+  <ion-content class="padding">
+
+ <div class="list">
+
+  
+    <div class="list card">
+      <div class="item item-divider ">Clients</div>
+
+      <div  
+      ng-click="voir($index)"    
+      ng-repeat="data in datas"
+      class="item item-icon-right">
+        <div>
+          <b>Date :</b> {{dateJav(data.dtsaisie) | date:'dd/MM/yyyy - hh:mm'}}
+        </div>
+        <div>
+          <b>Nom :</b> {{data.nom}}
+        </div>
+        <div>
+          <b>Prenom :</b> {{data.prenom}}
+        </div>
+        <i class="icon">{{data.total}}€</i>
+      </div>
+    </div>
+
+
+
+</div>
+
+  </ion-content>
+</ion-view>
+
+

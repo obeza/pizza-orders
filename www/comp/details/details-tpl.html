@@ -1,0 +1,59 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+
+    <div class="list card">
+      <div class="item item-divider">Client</div>
+      <div class="item item-body">
+        <div>
+          <b>Nom :</b> {{data.client.nom}}
+        </div>
+        <div>
+          <b>Prenom :</b> {{data.client.prenom}}
+        </div>
+        <div>
+          <b>Tel :</b> {{data.client.tel}}
+        </div>
+        <div>
+          <b>Adresse :</b> {{data.client.adresse}}
+        </div>
+      </div>
+    </div>
+
+     <div class="list">
+      <div
+      class="card" 
+      ng-repeat="article in articles track by $index"
+      >
+        <div
+            
+            class="item item-thumbnail-left"
+        >
+            <img src="img/article-pizza.jpeg" alt="">
+            <h3>{{article.nom}}</h3>
+            <p>Qte : {{article.quantite}}</p>
+
+            <p>{{article.total}}€</p>
+
+        </div>
+      </div>
+    </div>
+
+  <div class="card">
+    <div class="item item-text-wrap">
+
+      <div class="text-droite"><h2>total :{{getTotalPrix()}}€</div>
+
+    </div>
+  </div>
+
+
+<button class="button button-block button-balanced">
+  Accepter cette commande
+</button>
+
+<button class="button button-block button-assertive" ng-click=rejeter()>
+  Rejeter cette commande
+</button>
+
+  </ion-content>
+</ion-view>
